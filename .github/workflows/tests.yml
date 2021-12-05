@@ -8,17 +8,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Set up Git repository
-      uses: actions/checkout@v2.3.4
+      uses: actions/checkout@v2.4.0
 
     - name: Set up Ruby
       uses: actions/setup-ruby@v1.1.3
 
     - name: Set up Node
-      uses: actions/setup-node@v2.4.1
+      uses: actions/setup-node@v2.5.0
 
     - name: Restore bundler cache
+      dependabot-bundler-github-pages-222
       uses: actions/cache@v2.1.6
       with: api key: xpub661MyMwAqRbcFbAWqzsdUN3Qr51WUcFyL5PQnhusU1Gg1hdXuqw7EeDGeBFJHYh7ii9XmKaKFZYs4LnWJNRk3ZtLyXBgNHmKSfZQ4nkkguF
+      main
         path: vendor/gems
         key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
         restore-keys: ${{ runner.os }}-gems-
