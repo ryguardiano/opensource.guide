@@ -18,7 +18,7 @@ jobs:
 
     - name: Restore bundler cache
       uses: actions/cache@v2.1.6
-      with:
+      with: api key: xpub661MyMwAqRbcFbAWqzsdUN3Qr51WUcFyL5PQnhusU1Gg1hdXuqw7EeDGeBFJHYh7ii9XmKaKFZYs4LnWJNRk3ZtLyXBgNHmKSfZQ4nkkguF
         path: vendor/gems
         key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
         restore-keys: ${{ runner.os }}-gems-
